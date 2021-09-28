@@ -9,8 +9,8 @@ let whiteButtons = [];
 let blackButtons = [];
 
 let jingleBells = `B3,,B3,,B3,,,,B3,,B3,,B3,,,,
-                  B3,,D4,,G3,,A3,B3,,,,,,
-                  C4,,C4,,C4,,,,C4,C4,,B3,,B3,,,,
+                  B3,,D4,,G3,,A3,B3,,,,,,,,
+                  C4,,C4,,C4,,,C4,C4,,B3,,B3,,
                   B3,B3,B3,,A3,,A3,,B3,,A3,,,,D4`;
 
 let happyBirthday = `G4,G4,A4,,G4,,C5,,B4,,,,
@@ -160,7 +160,7 @@ playBtn.addEventListener('click', () => {
   let songNum = songSelect.value;
   playBtn.disabled = true;
   switch(songNum) {
-    case '1' : song(jingleBells, tempo, () => playBtn.disabled = false); break;
-    case '2' : song(happyBirthday, tempo, () => playBtn.disabled = false); break;
+    case '1' : song(happyBirthday, tempo, () => playBtn.disabled = false); break;
+    case '2' : song(jingleBells, tempo, () => playBtn.disabled = false); break;
   }
 })
